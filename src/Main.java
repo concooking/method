@@ -12,7 +12,7 @@ public class Main {
         System.out.println(String.format("Установите %s версию приложения для %s по ссылке", (yearOfProduction < clientDeviceYear ? "облегченную " : "обычную"), (OS == 0 ? "OS" : "Android")));
     }
 
-    // Задание 3 метод расчета дней доставки
+    // Задание 3 метод расчета доставки
     public static void deliveryCalculation(int distance) {
         if (distance <= 20) {
             System.out.printf("Потребуется дней: 1\n");
