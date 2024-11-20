@@ -13,16 +13,15 @@ public class Main {
     }
 
     // Задание 3
-    public static int distanceTime(int km){
-
-        if (km <= 20) {
-            return 1;
-        } else if (km > 20 && km < 60) {
-            return 2;
-        } else if (km >= 60 && km < 100) {
-            return 3;
+    public static void deliveryCalculation(int distance) {
+        if (distance <= 20) {
+            System.out.printf("Потребуется дней: 1\n");
+        } else if (distance > 20 && distance < 60) {
+            System.out.printf("Потребуется дней: 2\n");
+        } else if (distance >= 60 && distance < 100) {
+            System.out.printf("Потребуется дней: 3\n");
         } else {
-            return 0;
+            System.out.printf("Доставки нет\n");
         }
     }
 
@@ -32,12 +31,7 @@ public class Main {
         int deviceOS = 0;
         int clientDeviceYear = 2024;
         deviceAppVersion(deviceOS, clientDeviceYear);
-        int deliveryDistance = 95;
-        int days = distanceTime(deliveryDistance);
-        if (days > 0) {
-            System.out.println("Потребуется дней: " + days + " срок доставки.");
-        } else {
-            System.out.println("Доставки нет.");
-        }
+        int distance = 95;
+        deliveryCalculation(distance);
     }
 }
